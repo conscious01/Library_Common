@@ -1,0 +1,6 @@
+include ':lib_base'
+include ':module_alpha'
+include ':app'
+rootProject.name = "My Paradise"
+include ':mylibrary'
+include ':liangtian'

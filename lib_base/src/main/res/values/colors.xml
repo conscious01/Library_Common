@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#008577</color>
+
+    <!--    <color name="colorPrimary">#A6B670</color>-->
+    <!--    <color name="colorPrimaryDark">#A6B670</color>-->
+    <color name="colorAccent">#B84F33</color>
+
+    <color name="backgroundColor">#FFFFFF</color>
+    <color name="backgroundColorSecondary">#F2EFEB</color>
+    <color name="state_layout_background_color">@android:color/transparent</color>
+
+
+    <color name="color_c7c7c9">#FFC7C7C9</color>
+
+    <color name="white">#ffffffff</color>
+    <color name="lightgray">#ffdedede</color>
+
+    <!-- Button -->
+    <color name="button_blue">#ff5bc0de</color>
+    <color name="button_blue_edge">#ff46b8da</color>
+    <color name="button_blue_pressed">#ff39b3d7</color>
+    <color name="button_blue_disabled">#a55bc0de</color>
+    <color name="button_blue_disabled_edge">#a546b8da</color>
+
+    <color name="button_red">#ffd9534f</color>
+    <color name="button_red_edge">#ffd43f3a</color>
+    <color name="button_red_pressed">#ffd2322d</color>
+    <color name="button_red_disabled">#a5d9534f</color>
+    <color name="button_red_disabled_edge">#a5d43f3a</color>
+
+
+    <color name="black">#000000</color>
+
+
+    <color name="color_e6e6e6">#e6e6e6</color>
+
+    <!-- QRCode scanner color begin -->
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#B0000000</color>
+    <color name="viewfinder_frame">#90FFFFFF</color>
+    <!-- QRCode scanner color end -->
+
+
+    <color name="possible_result_points">#c0ffff00</color>
+
+
+    <color name="transparent">#00000000</color>
+
+
+    <!--雪白色 -->
+    <!--花白色 -->
+    <!--杏白色 -->
+    <!--幽灵白 -->
+    <!--烟白色 -->
+    <!--古董白 -->
+    <!--纳瓦白 -->
+    <!--灰色 -->
+    <!--淡灰色 -->
+    <!--亮灰色 -->
+    <!--暗灰色 -->
+    <!--暗灰色 -->
+    <!--灰石色 -->
+    <!--亮蓝灰 -->
+    <!--暗瓦灰色 -->
+    <!--银色 -->
+
+    <!--红色 -->
+    <!--暗深红色 -->
+    <!--暗洋红 -->
+    <!--紫红色 -->
+    <!--西红柿色 -->
+    <!--亮珊瑚色 -->
+    <!--暗肉色 -->
+    <!--桃色 -->
+    <!--洋李色 -->
+    <!--粉红色 -->
+    <!--亮粉红色 -->
+    <!--深粉红色 -->
+    <!--热粉红色 -->
+    <!--淡紫红 -->
+    <!--印第安红 -->
+    <!--褐玫瑰红 -->
+    <!--红砖色 -->
+    <!--粟色 -->
+    <!--蜜色 -->
+    <!--红橙色 -->
+    <!--橙绿色 -->
+    <!--酸橙色 -->
+    <!--黄色 -->
+    <!--浅黄色 -->
+    <!--黄褐色 -->
+    <!--实木色 -->
+    <!--桔黄色 -->
+    <!--亮黄色 -->
+    <!--暗金黄色 -->
+    <!--暗桔黄色 -->
+    <!--亮金黄色 -->
+    <!--柠檬绸色 -->
+    <!--米绸色 -->
+    <!--海贝色 -->
+    <!--番木色 -->
+    <!--浅玫瑰色 -->
+    <!--鹿皮色 -->
+    <!--象牙色 -->
+    <!--金色 -->
+    <!--金麒麟色 -->
+    <!--亮肉色 -->
+    <!--珊瑚色 -->
+    <!--薄荷色 -->
+    <!--米色 -->
+    <!--沙褐色 -->
+    <!--老花色 -->
+    <!--亚麻色 -->
+    <!--鲜肉色 -->
+    <!--蓟色 -->
+    <!--茶色 -->
+    <!--巧可力色 -->
+    <!--秘鲁色 -->
+    <!--暗黄褐色 -->
+    <!--苍麒麟色 -->
+    <!--褐色 -->
+    <!--重褐色 -->
+    <!--赭色 -->
+    <!--橄榄色 -->
+    <!--黄绿色 -->
+    <!--黄绿色 -->
+    <!--绿色 -->
+    <!--暗绿色 -->
+    <!--暗橄榄绿 -->
+    <!--深绿褐色 -->
+    <!--草绿色 -->
+    <!--森林绿 -->
+    <!--碧绿色 -->
+    <!--苍宝石绿 -->
+    <!--苍绿色 -->
+    <!--中绿宝石 -->
+    <!--中绿色 -->
+    <!--浅绿色 -->
+    <!--春绿色 -->
+    <!--中春绿色 -->
+    <!--暗宝石绿 -->
+    <!--海绿色 -->
+    <!--暗海兰色 -->
+    <!--青绿色 -->
+    <!--青色 -->
+    <!--暗青色 -->
+    <!--亮青色 -->
+    <!--水鸭色 -->
+    <!--靛青色 -->
+    <!--暗蓝色 -->
+    <!--中兰色 -->
+    <!--中灰兰色 -->
+    <!--海军色 -->
+    <!--皇家蓝 -->
+    <!--天蓝色 -->
+    <!--天蓝色 -->
+    <!--深天蓝色 -->
+    <!--亮天蓝色 -->
+    <!--亮海蓝色 -->
+    <!--亮蓝色 -->
+    <!--粉蓝色 -->
+    <!--艾利斯兰 -->
+    <!--中暗蓝色 -->
+    <!--石蓝色 -->
+    <!--暗灰蓝色 -->
+    <!--中海蓝 -->
+    <!--钢兰色 -->
+    <!--亮钢兰色 -->
+    <!--菊兰色 -->
+    <!--闪兰色 -->
+    <!--军兰色 -->
+    <!--紫罗兰蓝色 -->
+    <!--紫色 -->
+    <!--淡紫色 -->
+    <!--淡紫色 -->
+    <!--中紫色 -->
+    <!--暗紫色 -->
+    <!--紫罗兰色 -->
+    <!--中紫罗兰色 -->
+    <!--苍紫罗兰色 -->
+    <!--暗紫罗兰色 -->
+    <!--中粉紫色 -->
+
+
+</resources>

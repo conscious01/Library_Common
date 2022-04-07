@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@android:color/transparent"
+    android:layout_margin="0dp"
+    android:layout_gravity="center|center_vertical">
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/round_rect_back_shape"
+        android:padding="10dp"
+        android:gravity="left|center_vertical">
+        
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDrawable="@drawable/wait_progress_dialog_drawable"
+            android:indeterminateDuration="50"
+            android:indeterminateOnly="true" 
+            android:layout_margin="10dp"/>
+        
+        <TextView android:id="@+id/messageTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ff000000"
+            android:textSize="20sp"
+            android:text="这里是测试提示框的内容提示的东西"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            />
+        
+        
+        
+    </LinearLayout>
+    
+</LinearLayout>

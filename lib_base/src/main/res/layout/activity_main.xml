@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myapp="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_bk"
+    android:baselineAligned="true"
+    android:orientation="vertical"
+    android:padding="0dip">
+
+    <!-- 用于顶部那条BAR的特效。 -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="@drawable/top_bar_back"
+        android:orientation="vertical"
+        android:paddingLeft="0dp"
+        android:paddingTop="6dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:baselineAligned="true"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="8dp">
+
+            <com.bt.RoadParking.ui.views.RoundImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:clickable="false"
+                android:src="@drawable/userhead"
+                myapp:border_inside_color="#48D1CC"
+                myapp:border_outside_color="#48D1CC"
+                myapp:border_thickness="1dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:ellipsize="end"
+                    android:gravity="left|top"
+                    android:shadowColor="#ff000000"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="1"
+                    android:singleLine="true"
+                    android:text="收费员ID:001"
+                    android:textColor="#ffffffff"
+                    android:textSize="@dimen/defSmallFontSize" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:ellipsize="end"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:shadowColor="#ff000000"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="1"
+                    android:singleLine="true"
+                    android:text="终端机号:0001"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/defSmallFontSize" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:shadowColor="#ff000000"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="1"
+                        android:text="车位:"
+                        android:textColor="#ffffffff"
+                        android:textSize="@dimen/defSmallFontSize" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:shadowColor="#ff000000"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="1"
+                        android:text="0"
+                        android:textColor="#ffffffff"
+                        android:textSize="@dimen/defSmallFontSize" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:shadowColor="#ff000000"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="1"
+                        android:text="/"
+                        android:textColor="#ffffffff"
+                        android:textSize="@dimen/defSmallFontSize" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:shadowColor="#ff000000"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="1"
+                        android:text="0"
+                        android:textColor="#ffffffff"
+                        android:textSize="@dimen/defSmallFontSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/needconfirmlayerback"
+                    android:clickable="true"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dp_5"
+                    android:paddingBottom="@dimen/dp_5">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/self_parkout_notify_anim_background"
+                        android:orientation="horizontal"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|right"
+                            android:shadowColor="#ff000000"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="1"
+                            android:text="需确认:"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/defSmallFontSize" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|right"
+                            android:ellipsize="end"
+                            android:maxWidth="58dp"
+                            android:shadowColor="#ff000000"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="1"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/defSmallFontSize" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|left"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="6dp"
+                android:shadowColor="#ff000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="电池电量:"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/defSmallFontSize" />
+
+            <com.bt.RoadParking.ui.views.BatteryView
+                android:layout_width="30dp"
+                android:layout_height="14dp"
+                android:layout_marginRight="8dp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                myapp:batteryOrientation="horizontal" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="6dp"
+                android:shadowColor="#ff000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="网络状态:"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/defSmallFontSize" />
+
+            <com.bt.RoadParking.ui.views.NetStateCtrl
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:gravity="left"
+                android:shadowColor="#ff000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="版本:v1.0"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/defSmallFontSize" />
+
+        </LinearLayout>
+
+        <!-- 用于绘制中间那个区域的底部的那个条 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/center_bar_top_line"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp" />
+
+        <!-- 结束绘制中间那个区域的底部的那个条 -->
+
+    </LinearLayout>
+    <!-- 用于结束中间那条BAR的特效。 -->
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_weight="1">
+
+
+        <!-- 开始四个功能的区域 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical"
+            android:padding="0dip">
+
+            <!-- 开始入场停车和出场收费的区域 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="0dp"
+                android:gravity="center_horizontal|top"
+                android:orientation="horizontal">
+
+                <com.bt.RoadParking.ui.views.CircleImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="出/入场"
+                    android:textSize="25sp"
+                    myapp:nmfontcolor="#ffeb4f38"
+                    myapp:normal_conver_drawable="@drawable/park_in_conver_normal_drawable"
+                    myapp:normal_ico="@drawable/park_in_normal"
+                    myapp:press_conver_drawable="@drawable/park_in_conver_press_drawable"
+                    myapp:press_ico="@drawable/park_in_press"
+                    myapp:prsfontcolor="#ffffffff" />
+
+                <com.bt.RoadParking.ui.views.CircleImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="流水查询"
+                    android:textSize="25sp"
+                    myapp:nmfontcolor="#ff09F73B"
+                    myapp:normal_conver_drawable="@drawable/park_out_conver_normal_drawable"
+                    myapp:normal_ico="@drawable/park_out_normal"
+                    myapp:press_conver_drawable="@drawable/park_out_conver_press_drawable"
+                    myapp:press_ico="@drawable/park_out_press"
+                    myapp:prsfontcolor="#ffffffff" />
+
+            </LinearLayout>
+
+            <!-- 结束入场停车和出场收费的区域 -->
+
+
+            <!-- 开始停车管理和退出应用的区域 -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="0dp"
+                android:gravity="center_horizontal|top"
+                android:orientation="horizontal">
+
+                <com.bt.RoadParking.ui.views.CircleImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="其它"
+                    android:textSize="25sp"
+                    myapp:nmfontcolor="#fff4c600"
+                    myapp:normal_conver_drawable="@drawable/other_manage_btn_conver_normal_drawable"
+                    myapp:normal_ico="@drawable/other_manage_btn_normal"
+                    myapp:press_conver_drawable="@drawable/other_manage_btn_conver_press_drawable"
+                    myapp:press_ico="@drawable/other_manage_btn_press"
+                    myapp:prsfontcolor="#ffffffff" />
+
+                <com.bt.RoadParking.ui.views.CircleImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="签退"
+                    android:textSize="25sp"
+                    myapp:nmfontcolor="#ffFF0066"
+                    myapp:normal_conver_drawable="@drawable/park_record_conver_normal_drawable"
+                    myapp:normal_ico="@drawable/exit_normal"
+                    myapp:press_conver_drawable="@drawable/park_record_conver_press_drawable"
+                    myapp:press_ico="@drawable/exit_press"
+                    myapp:prsfontcolor="#ffffffff" />
+
+
+            </LinearLayout>
+
+            <!-- 结束停车管理和退出应用的区域 -->
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dp_70"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="0dp"
+                android:gravity="center_horizontal|top"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_5"
+                android:visibility="gone">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="上班打卡"
+                    android:textSize="25sp" />
+
+                <Button
+                    style="@style/buttonStyleRed"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="下班打卡"
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <!-- 结束四个功能的区域 -->
+
+    </ScrollView>
+
+
+    <!-- 开始底部区域 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bottom_bar_back"
+        android:gravity="center|top"
+        android:orientation="vertical"
+        android:paddingTop="0dp"
+        android:paddingBottom="6dp">
+
+        <!-- 用于实现顶部那条渐变线 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_margin="0dp"
+            android:background="@drawable/center_bar_bottom_line"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:shadowColor="#ff000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="1"
+            android:singleLine="true"
+            android:text="@string/app_info_tip"
+            android:textColor="@color/white"
+            android:textSize="@dimen/defMiddleFontSize" />
+
+        <!--
+        <TextView
+            android:id="@+id/version_text_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="软件版本:2.0.1"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/defMiddleFontSize" />
+        -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:shadowColor="#ff000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="1"
+            android:singleLine="true"
+            android:text="2017-05-27 23:59:59"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/defMiddleFontSize" />
+
+    </LinearLayout>
+    <!-- 结束底部区域 -->
+
+
+</LinearLayout>

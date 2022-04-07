@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:paddingLeft="@dimen/dp_16"
+  android:paddingRight="@dimen/dp_16">
+
+
+  <ImageView
+    android:id="@+id/iv_arrow"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/dp_14"
+    android:rotation="180"
+    android:src="@drawable/ic_back_black"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+    android:id="@+id/tv_label"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_16"
+    android:layout_marginBottom="@dimen/dp_16"
+    android:textColor="#232324"
+    android:textSize="@dimen/sp_16"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:text="联系客服" />
+
+
+  <TextView
+    android:id="@+id/tv_label_second"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/dp_5"
+    android:textColor="#ff4f5152"
+    android:textSize="16sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintRight_toLeftOf="@id/iv_arrow"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:text="简体中文" />
+
+  <View
+    android:id="@+id/label_dividing_view"
+    android:layout_width="match_parent"
+    android:layout_height="0.5dp"
+    android:background="@color/color_e6e6e6"
+    android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    tools:visibility="visible" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

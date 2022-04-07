@@ -1,0 +1,21 @@
+<resources>
+
+
+    <string name="tv_net_tips_1">网络已断开，请连接网络！</string>
+    <string name="cancel">取消</string>
+    <string name="warm_hint">温馨提示</string>
+    <string name="sure_to_open_notification">是否开启通知？</string>
+    <string name="loading">请求中…</string>
+    <string name="network_error">网络错误</string>
+
+    <string name="app_name">智能停车</string>
+    <string name="app_info_tip">智能停车</string>
+
+    <!-- 授权验证失败 -->
+
+    <string name="confirm">确定</string>
+
+
+
+
+</resources>

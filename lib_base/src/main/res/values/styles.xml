@@ -1,0 +1,189 @@
+<resources>
+
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- 系统主题样式 -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowFullscreen">true</item>
+
+        <item name="chipStyle">@style/chipStyle</item>
+        <item name="chipGroupStyle">@style/chipGroupStyle</item>
+        <item name="editTextStyle">@style/editTextStyle</item>
+
+
+        <item name="empty_res">@layout/view_state_layout_empty</item>
+
+
+        <item name="android:textAllCaps">false</item>
+        <item name="android:editTextStyle">@style/editTextStyle</item>
+        <item name="android:textViewStyle">@style/textViewStyle</item>
+        <item name="android:textAppearanceLarge">@style/textAppearanceLarge</item>
+        <item name="android:buttonStyle">@style/buttonStyle</item>
+        <item name="android:buttonStyleSmall">@style/buttonStyle.Small</item>
+        <item name="android:checkboxStyle">@style/checkboxStyle</item>
+        <item name="android:radioButtonStyle">@style/radioButtonStyle</item>
+        <item name="android:ratingBarStyle">@style/ratingBarStyle</item>
+        <item name="ratingBarStyle">@style/ratingBarStyle</item>
+        <item name="android:scrollbars">none</item>
+
+        <item name="buttonBarNegativeButtonStyle">@style/buttonBarNegativeButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/buttonBarPositiveButtonStyle</item>
+        <item name="buttonBarNeutralButtonStyle">@style/buttonBarNeutralButtonStyle</item>
+
+        <!-- 自定义主题样式 -->
+        <item name="textColorPrimary">#20272f</item>
+        <item name="textColorPrimaryInverse">#FFFFFF</item>
+        <item name="dividerColor">#F1F0EF</item>
+        <item name="textColorHint">#BCBEC0</item>
+        <item name="textColorSecondary">#BCBEC0</item>
+        <item name="textColorHighlight">#80993C</item>
+        <item name="textColorCalendar">#D9D9DC</item>
+        <item name="backgroundColor">@color/backgroundColor</item>
+        <item name="backgroundColorSecondary">@color/backgroundColorSecondary</item>
+    </style>
+
+    <!-- 全局文字样式 -->
+    <style name="textViewStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:textColorHint">?textColorHint</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="textAppearanceLarge">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 全局输入框样式 -->
+    <style name="editTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:minHeight">@dimen/edit_min_height</item>
+        <item name="android:textColorHint">?attr/textColorHint</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+    </style>
+
+
+    <style name="buttonStyleRed" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/selector_but_bg_red</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?attr/textColorPrimaryInverse</item>
+        <item name="android:minHeight">46dp</item>
+        <item name="android:maxHeight">46dp</item>
+    </style>
+
+
+    <!-- 全局按键样式 -->
+    <style name="buttonStyle" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/blue_button_selector</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:minHeight">46dp</item>
+        <item name="android:maxHeight">46dp</item>
+    </style>
+
+    <style name="buttonStyle.Small">
+        <item name="android:minHeight">32dp</item>
+        <item name="android:maxHeight">32dp</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="buttonBarNegativeButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">#333333</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="buttonBarPositiveButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">#DDA031</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="buttonBarNeutralButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <!--        <item name="android:visibility">gone</item>-->
+    </style>
+
+
+    <style name="checkboxStyle" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/select_check_box_master</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:background">@null</item>
+    </style>
+
+
+    <style name="radioButtonStyle" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/selector_radio_button</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#575042</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingStart">8dp</item>
+    </style>
+
+    <style name="ratingBarStyle" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="android:numStars">5</item>
+        <item name="android:stepSize">0.5</item>
+        <item name="android:isIndicator">true</item>
+    </style>
+
+
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicatorColor" format="color" />
+        <attr name="pstsUnderlineColor" format="color" />
+        <attr name="pstsDividerColor" format="color" />
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <attr name="PagerSliding_pstsDividerPadding" format="dimension" />
+        <attr name="pstsDividerPaddingTopBottom" format="dimension" />
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsTabBackground" format="reference" />
+        <!--该属性表示里面的TAB是否均分整个PagerSlidingTabStrip控件的宽,true是,false不均分,从左到右排列,默认false-->
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsTextAllCaps" format="boolean" />
+        <attr name="pstsTextSelectedColor" format="color" />
+        <!--缩放的最大值,0.3表示放大后最大是原来的0.3倍,默认未0.3-->
+        <attr name="pstsScaleZoomMax" format="float" />
+        <attr name="pstsSmoothScrollWhenClickTab" format="boolean" />
+        <!-- 宽为match_parent ，指示器的宽需手动计算的问题,这个属性设置为true,则指示器的位置和字体的宽一样-->
+        <!--    <attr name="pstsIndicatorWrap" format="boolean" />-->
+    </declare-styleable>
+
+    <style name="chipGroupStyle" parent="Widget.MaterialComponents.ChipGroup">
+        <item name="chipSpacing">10dp</item>
+    </style>
+
+    <style name="chipStyle" parent="Widget.MaterialComponents.Chip.Action">
+        <!--        <item name="android:background">@drawable/selector_chip_label_bg</item>-->
+        <item name="android:button">@null</item>
+        <item name="android:textColor">?attr/textColorHighlight</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:minHeight">23dp</item>
+        <item name="android:maxHeight">23dp</item>
+        <item name="android:minWidth">52dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+
+
+    <style name="dialog_anim1" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_appear</item>
+        <item name="android:windowExitAnimation">@anim/dialog_disappear</item>
+    </style>
+
+    <!--dialog样式的activity-->
+
+</resources>

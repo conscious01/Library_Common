@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="center_horizontal"
+    android:layout_height="match_parent">
+
+    <com.hjq.shape.view.ShapeButton
+        android:layout_marginTop="@dimen/dp_55"
+        android:layout_width="@dimen/dp_250"
+        android:text="单个请求"
+        android:gravity="center"
+        android:id="@+id/btn_visit"
+        app:shape_centerColor="@color/colorPrimaryDark"
+        android:layout_height="@dimen/dp_55" />
+
+</LinearLayout>
