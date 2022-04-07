@@ -69,7 +69,7 @@ dependencies {
         exclude group: 'com.davemorrissey.labs'
     }
 
-
+    //屏幕适配
     api 'me.jessyan:autosize:1.1.2'
 
     //文字排列
@@ -98,13 +98,14 @@ dependencies {
         exclude group: "com.android.support"
     }
 
-    // util
+    // Json解析
     api 'com.google.code.gson:gson:2.8.6'
     api 'com.gitee.Aletto:android-logger:1.0.8'
 
     //状态栏
     api 'com.jaeger.statusbarutil:library:1.5.1'
 
+    //万能工具类
     api 'com.blankj:utilcodex:1.28.3'
 
     //版本更新
@@ -114,9 +115,11 @@ dependencies {
     api 'io.reactivex.rxjava2:rxjava:2.2.2'
     api 'io.reactivex.rxjava2:rxandroid:2.1.0'
 //    api 'com.jakewharton.rxbinding2:rxbinding:2.2.0'
-    api 'com.jakewharton:butterknife:10.0.0'
 
+    api 'com.jakewharton:butterknife:10.0.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+
+    //请求权限
     api 'pub.devrel:easypermissions:3.0.0'
 
     // net
@@ -128,7 +131,7 @@ dependencies {
     api 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
     api 'com.squareup.okhttp3:okhttp:4.8.0'
 
-
+    //查看大图
     api 'com.ycjiang:ImagePreview:2.3.5'
 
     //sp保存的库
@@ -184,7 +187,11 @@ dependencies {
     }
     //    api 'com.google.zxing:core:3.3.0'
 
+    //需要写shape的view
     api 'com.github.RuffianZhong:RWidgetHelper:androidx.v0.0.9'
+
+    api 'me.jessyan:retrofit-url-manager:1.4.0'
+
 
 
 }
