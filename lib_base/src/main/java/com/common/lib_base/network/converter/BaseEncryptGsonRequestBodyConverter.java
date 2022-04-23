@@ -22,7 +22,7 @@ public class BaseEncryptGsonRequestBodyConverter<T> implements Converter<T, Requ
     private final Gson           gson;
     private final TypeAdapter<T> adapter;
 
-    BaseEncryptGsonRequestBodyConverter(Gson gson, TypeAdapter<T> adapter) {
+    public BaseEncryptGsonRequestBodyConverter(Gson gson, TypeAdapter<T> adapter) {
         this.gson = gson;
         this.adapter = adapter;
     }

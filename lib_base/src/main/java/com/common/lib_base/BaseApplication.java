@@ -3,7 +3,7 @@ package com.common.lib_base;
 import static androidx.multidex.BuildConfig.DEBUG;
 
 import com.blankj.utilcode.util.LogUtils;
-import com.common.lib_base.common.utils.image.GlideApp;
+import com.common.lib_base.common.image.GlideApp;
 import com.common.lib_base.common.utils.CrashHelper;
 import java.io.PrintWriter;
 import java.io.StringWriter;

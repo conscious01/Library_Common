@@ -21,7 +21,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.SizeUtils;
-import com.common.lib_base.ui.views.RVItemDecoration;
+import com.common.lib_base.common.RVItemDecoration;
 import com.example.lib_base.R;
 
 

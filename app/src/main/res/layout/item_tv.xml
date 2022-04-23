@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/item_tv"
     android:layout_width="match_parent"
+    android:background="@color/darkgoldenrod"
     android:layout_height="@dimen/dp_46"
     android:gravity="center"
     tools:text="房东绥芬河市地方说的">

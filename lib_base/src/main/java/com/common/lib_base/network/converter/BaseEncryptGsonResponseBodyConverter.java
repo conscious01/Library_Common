@@ -15,7 +15,7 @@ public class BaseEncryptGsonResponseBodyConverter<T> implements Converter<Respon
     private final Gson gson;
     private final TypeAdapter<T> adapter;
 
-    BaseEncryptGsonResponseBodyConverter(Gson gson, TypeAdapter<T> adapter) {
+    public BaseEncryptGsonResponseBodyConverter(Gson gson, TypeAdapter<T> adapter) {
         this.gson = gson;
         this.adapter = adapter;
     }

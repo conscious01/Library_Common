@@ -8,8 +8,8 @@
     <string name="loading">请求中…</string>
     <string name="network_error">网络错误</string>
 
-    <string name="app_name">智能停车</string>
-    <string name="app_info_tip">智能停车</string>
+    <string name="app_name">app_name</string>
+    <string name="app_info_tip">app_name</string>
 
     <!-- 授权验证失败 -->
 
