@@ -84,7 +84,7 @@ public class BaseResponseObserver<T extends BaseResEntity> implements Observer<T
             if (e instanceof ConnectException) {
                 view.offline();
             } else {
-                view.failure(ExceptionHandler.handleException(e));
+                view.failure(e);
             }
         }
 

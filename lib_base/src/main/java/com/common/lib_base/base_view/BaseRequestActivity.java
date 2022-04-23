@@ -10,7 +10,7 @@ import androidx.annotation.LayoutRes;
 import and.fast.statelayout.OnAnewRequestNetworkListener;
 import and.fast.statelayout.StateLayout;
 import com.common.lib_base.network.views.BaseIStatusView;
-import com.common.lib_base.network.views.BaseLayoutRequestStatusView;
+import com.common.lib_base.network.views.BaseMultipleStateView;
 
 public abstract class BaseRequestActivity extends BaseActivity
         implements OnAnewRequestNetworkListener,
@@ -82,7 +82,7 @@ public abstract class BaseRequestActivity extends BaseActivity
      * 状态布局
      */
     protected BaseIStatusView createStatusView() {
-        return new BaseLayoutRequestStatusView(this.mStateLayout);
+        return new BaseMultipleStateView(this.mStateLayout);
     }
 
     @Override

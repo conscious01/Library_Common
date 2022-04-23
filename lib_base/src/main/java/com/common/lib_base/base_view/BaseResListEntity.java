@@ -12,6 +12,15 @@ public class BaseResListEntity<T> {
     private String msg;
     private String methodName;
     private int total;
+
+    public int getTotal() {
+        return total;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
+    }
+
     private int page,pageSize;
     public boolean hasMore() {
         return (page * pageSize) < total;

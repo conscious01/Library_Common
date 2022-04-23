@@ -7,11 +7,18 @@ import com.mondo.logger.Logger;
 
 import and.fast.statelayout.StateLayout;
 
-public class BaseLayoutRequestStatusView implements BaseIStatusView {
+/**
+ * 多状态布局
+ * 加载中
+ * 网络错误
+ * 数据为空
+ * 没有网络
+ */
+public class BaseMultipleStateView implements BaseIStatusView {
 
     private final StateLayout mStateLayout;
 
-    public BaseLayoutRequestStatusView(StateLayout layout) {
+    public BaseMultipleStateView(StateLayout layout) {
         this.mStateLayout = layout;
     }
 

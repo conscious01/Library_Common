@@ -72,7 +72,7 @@ public class BaseApplication extends MultiDexApplication {
     public void onCreate() {
         super.onCreate();
         mInstantce = this;
-        LogUtils.i(this, "我被初始化了");
+        LogUtils.i(TAG, "我被初始化了");
         initCrashHandler();
         initThirdService();
 

@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 import and.fast.statelayout.OnAnewRequestNetworkListener;
 import and.fast.statelayout.StateLayout;
 import com.common.lib_base.network.views.BaseIStatusView;
-import com.common.lib_base.network.views.BaseLayoutRequestStatusView;
+import com.common.lib_base.network.views.BaseMultipleStateView;
 
 public abstract class BaseRequestFragment
 //        <P extends RequestPresenter>
@@ -59,7 +59,7 @@ public abstract class BaseRequestFragment
 //    }
 
     protected BaseIStatusView createRequestView() {
-        return new BaseLayoutRequestStatusView(this.mNetworkStateLayout);
+        return new BaseMultipleStateView(this.mNetworkStateLayout);
     }
 
     @Override

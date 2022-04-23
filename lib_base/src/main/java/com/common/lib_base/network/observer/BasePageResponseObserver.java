@@ -10,14 +10,17 @@ import java.util.List;
 public class BasePageResponseObserver<T> extends
         BaseResListObserver<BaseResListEntity<T>> {
 
-    private final int mPage;
+    private final int page;
+    private final int pageSize;
 
-    private final BaseIPageView mView;
+    private final BaseIPageView view;
 
-    public BasePageResponseObserver(BaseRequestPresenter presenter, BaseIPageView view, int page) {
+    public BasePageResponseObserver(BaseRequestPresenter presenter, BaseIPageView view, int page,int pageSize) {
         super(presenter, view, null);
-        this.mPage = page;
-        this.mView = view;
+        this.page = page;
+        this.view = view;
+        this.pageSize = pageSize;
+
     }
 
 
@@ -27,18 +30,18 @@ public class BasePageResponseObserver<T> extends
 
         List<T> dataList = entity.getRows();
 
-        if (mPage <= 1) {
-            mView.renderRefresh(dataList);
+        if (page <= 1) {
+            view.renderRefresh(dataList);
 
         } else {
-            mView.renderLoadMore(dataList);
+            view.renderLoadMore(dataList);
         }
 
-        if (!entity.hasMore()) {
-            mView.renderNoMore();
+        if (!((page * pageSize) < entity.getTotal())) {
+            view.renderNoMore();
         }
 
-        mView.complete();
+        view.complete();
     }
 
 }

@@ -32,10 +32,12 @@
         <entry key="lib_base/src/main/res/drawable/self_parkout_notify_anim_background.xml" value="0.129" />
         <entry key="lib_base/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="lib_base/src/main/res/layout/alert_dialog.xml" value="0.1" />
+        <entry key="lib_base/src/main/res/layout/base_footer_no_more.xml" value="0.25" />
         <entry key="lib_base/src/main/res/layout/c_arrow_setting_label.xml" value="0.1" />
         <entry key="lib_base/src/main/res/layout/include_activity_title.xml" value="0.335" />
         <entry key="lib_base/src/main/res/layout/include_smart_refresh_recycler_view.xml" value="0.1" />
-        <entry key="lib_base/src/main/res/layout/view_state_layout_empty.xml" value="0.1" />
+        <entry key="lib_base/src/main/res/layout/view_state_layout_empty.xml" value="0.25" />
+        <entry key="lib_base/src/main/res/layout/view_state_layout_failure.xml" value="0.25" />
         <entry key="lib_base/src/main/res/layout/wait_progress_dialog.xml" value="0.1" />
         <entry key="lib_base/src/main/res/layout/wait_progress_dialog_my.xml" value="0.1" />
       </map>

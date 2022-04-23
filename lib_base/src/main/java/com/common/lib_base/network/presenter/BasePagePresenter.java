@@ -17,7 +17,7 @@ public abstract class BasePagePresenter<T> extends
         BaseRequestPresenter<BaseIPageView<T>> implements
         BaseIPagePresenter<BaseIPageView<T>, T> {
 
-    protected int mPage,mPageSize=10;
+    protected int page, pageSize =10;
 
     @Override
     public void setModelAndView(BaseIPageView<T> view) {
@@ -34,24 +34,24 @@ public abstract class BasePagePresenter<T> extends
     @Override
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     public void requestRefresh() {
-        mPage = 1;
+        page = 1;
 
         execute().compose(BaseSchedulersTransformer.transformer(mView))
-                .subscribe(new BasePageResponseObserver<>(this, mView, mPage));
+                .subscribe(new BasePageResponseObserver<>(this, mView, page,pageSize));
     }
 
 
 
     @Override
     public void requestLoadMore() {
-        ++mPage;
+        ++page;
 
         execute().compose(BaseSchedulersTransformer.transformer(mView))
-                .subscribe(new BasePageResponseObserver<>(this, mView, mPage));
+                .subscribe(new BasePageResponseObserver<>(this, mView, page,pageSize));
     }
 
     public void resetPage() {
-        this.mPage = 1;
+        this.page = 1;
     }
 
     @Override

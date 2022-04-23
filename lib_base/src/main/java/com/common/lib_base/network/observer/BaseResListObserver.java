@@ -76,7 +76,7 @@ public class BaseResListObserver<T extends BaseResListEntity> implements Observe
             if (e instanceof ConnectException) {
                 mView.offline();
             } else {
-                mView.failure(ExceptionHandler.handleException(e));
+                mView.failure(e);
 
             }
         }

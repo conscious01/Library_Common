@@ -28,11 +28,12 @@ public class BasePageView<T> implements BaseIPageView<T> {
     private final SmartRefreshLayout mSmartRefreshLayout;
 
     private int mEmptyLayoutResId = R.layout.view_state_layout_empty;
-    private int mHeaderLayoutResId;
-    private int mNotMoreFooterLayoutResId;
+    private int mHeaderLayoutResId ;
+    private int mNotMoreFooterLayoutResId= R.layout.base_footer_no_more;
 
 
-    public BasePageView(RecyclerView recyclerView, @NonNull SmartRefreshLayout refreshLayout, @NonNull BaseIStatusView view) {
+    public BasePageView(RecyclerView recyclerView, @NonNull SmartRefreshLayout refreshLayout,
+            @NonNull BaseIStatusView view) {
         this.mStatusView = view;
         this.mRecyclerView = recyclerView;
         this.mSmartRefreshLayout = refreshLayout;

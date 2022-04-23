@@ -18,7 +18,7 @@ public class MsgListPresenter extends BasePagePresenter {
     @Override
     protected Observable<BaseResListEntity<EntityMsg>> execute() {
 
-        return BaseRetrofitManger.getInstance().getMsgList(mPage, msgId);
+        return BaseRetrofitManger.getInstance().getMsgList(page, msgId);
 
     }
 }

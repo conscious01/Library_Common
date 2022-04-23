@@ -4,6 +4,7 @@ package com.common.lib_base.network.views;
 
 import android.content.Context;
 import com.blankj.utilcode.util.ToastUtils;
+import com.common.lib_base.network.exceptions.ExceptionHandler;
 import com.example.lib_base.R;
 import com.common.lib_base.common.utils.BaseUniversalToast;
 
@@ -29,7 +30,7 @@ public class BaseToastRequestStatusView implements BaseIStatusView {
         throwable.printStackTrace();
 
         if (throwable != null) {
-            BaseUniversalToast.showFailedIconToast(throwable.getMessage());
+            BaseUniversalToast.showFailedIconToast(ExceptionHandler.handleException(throwable).message);
         }
 
     }
