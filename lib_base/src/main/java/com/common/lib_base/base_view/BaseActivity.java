@@ -15,7 +15,7 @@ package com.common.lib_base.base_view;
 import com.example.lib_base.R;
 import com.common.lib_base.common.utils.AndroidUtil;
 import com.common.lib_base.common.utils.ThemeUtil;
-import com.common.lib_base.moddule.BaseEvent;
+import com.common.lib_base.module.BaseEvent;
 import org.greenrobot.eventbus.EventBus;
 
 import com.blankj.utilcode.util.KeyboardUtils;

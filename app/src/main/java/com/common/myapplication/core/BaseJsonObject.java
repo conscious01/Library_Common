@@ -1,4 +1,4 @@
-package com.common.lib_base.common.utils;
+package com.common.myapplication.core;
 
 import com.google.gson.JsonObject;
 
@@ -41,12 +41,7 @@ public class BaseJsonObject {
             return this;
         }
 
-        public Builder buildCompanyId() {
 
-            jsonObject.addProperty("companyId", "66bc4852-40c0-4c7a-b2f9-0722846c2d21");
-            return this;
-
-        }
 
 
     }

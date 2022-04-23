@@ -23,10 +23,6 @@ public class BaseToastRequestStatusView implements BaseIStatusView {
 
     }
 
-    @Override
-    public void failureWithMethodName(Throwable throwable, String methodName) {
-
-    }
 
     @Override
     public void failure(Throwable throwable) {

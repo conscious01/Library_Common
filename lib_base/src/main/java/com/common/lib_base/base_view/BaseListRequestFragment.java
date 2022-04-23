@@ -5,13 +5,13 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.viewholder.BaseViewHolder;
-import com.common.lib_base.network.presenter.BaseIPaginationPresenter;
+import com.common.lib_base.network.presenter.BaseIPagePresenter;
 import com.example.lib_base.R;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnRefreshLoadMoreListener;
 
-public abstract class BaseListRequestFragment<P extends BaseIPaginationPresenter, T> extends
+public abstract class BaseListRequestFragment<P extends BaseIPagePresenter, T> extends
         BaseRequestFragment
         implements OnRefreshLoadMoreListener {
 

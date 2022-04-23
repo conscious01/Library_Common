@@ -4,8 +4,14 @@ import android.os.Bundle;
 import android.util.Log;
 import com.blankj.utilcode.util.LogUtils;
 import com.common.lib_base.base_view.BaseRequestActivity;
+import com.common.lib_base.base_view.BaseResEntity;
 import com.common.lib_base.network.interceptor.BaseCommonParameterInterceptor;
 import com.common.lib_base.network.converter.BaseEncryptGsonConverterFactory;
+import com.common.lib_base.network.views.BaseIStatusView;
+import com.common.lib_base.network.views.BaseLoadingStatusView;
+import com.common.myapplication.bean.EntityLoginResult;
+import com.common.myapplication.network.LoginPresenter;
+import com.common.myapplication.network.LoginPresenter.View;
 import com.example.myapplication.R;
 import java.io.Serializable;
 import java.util.concurrent.TimeUnit;
@@ -22,19 +28,29 @@ import retrofit2.http.Query;
  * @author Mr.W
  * @since 11/3/2022 10:54 pm
  */
-public class VisitNetActivity extends BaseRequestActivity {
+public class VisitNetActivity extends BaseRequestActivity implements View {
 
     private com.hjq.shape.view.ShapeButton btnVisit;
+    private com.hjq.shape.view.ShapeButton btn2;
+    private com.hjq.shape.view.ShapeButton btn3;
+    private com.hjq.shape.view.ShapeButton btn4;
+    private com.hjq.shape.view.ShapeButton btn5;
 
     @Override
     protected int getContentLayoutId() {
         return R.layout.visit_net_activity;
     }
 
+
+    private LoginPresenter loginPresenter;
+
     @Override
     protected void initialize(Bundle savedInstanceState) {
 
         initView();
+
+        loginPresenter = new LoginPresenter();
+        loginPresenter.setModelAndView(this);
 
         //单个请求演示
         btnVisit.setOnClickListener(v -> {
@@ -84,6 +100,27 @@ public class VisitNetActivity extends BaseRequestActivity {
 
         });
 
+        btn2.setOnClickListener(v -> {
+            onBtn2Clicked();
+        });
+
+    }
+
+    @Override
+    protected BaseIStatusView createStatusView() {
+        return new BaseLoadingStatusView(this);
+    }
+
+    private void onBtn2Clicked() {
+
+        loginPresenter.doLogin("0755", "000000");
+    }
+
+    @Override
+    public void onLoginSuccess(BaseResEntity loginResult) {
+        LogUtils.i(loginResult);
+        EntityLoginResult loginResult1 = (EntityLoginResult) loginResult.getData();
+        LogUtils.i(loginResult1);
     }
 
     public interface GitHubAPI {
@@ -96,6 +133,10 @@ public class VisitNetActivity extends BaseRequestActivity {
 
     private void initView() {
         btnVisit = findViewById(R.id.btn_visit);
+        btn2 = findViewById(R.id.btn_2);
+        btn3 = findViewById(R.id.btn_3);
+        btn4 = findViewById(R.id.btn_4);
+        btn5 = findViewById(R.id.btn_5);
     }
 
     class EntityUploadInfo {

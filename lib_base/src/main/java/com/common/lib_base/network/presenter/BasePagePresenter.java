@@ -4,30 +4,32 @@ import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.OnLifecycleEvent;
 
 
-import com.common.lib_base.base_view.BaseResponseRowsEntity;
-import com.common.lib_base.network.views.BaseIPaginationView;
-import com.common.lib_base.network.observer.BasePaginationResponseObserver;
+import com.common.lib_base.base_view.BaseResListEntity;
+import com.common.lib_base.network.views.BaseIPageView;
+import com.common.lib_base.network.observer.BasePageResponseObserver;
 import com.common.lib_base.network.observer.BaseSchedulersTransformer;
 import io.reactivex.Observable;
 
 /**
  * 分页数据 帮助对象
  */
-public abstract class BaseSimplePaginationPresenter<T> extends
-        BaseRequestPresenter<BaseIPaginationView<T>> implements
-        BaseIPaginationPresenter<BaseIPaginationView<T>, T> {
+public abstract class BasePagePresenter<T> extends
+        BaseRequestPresenter<BaseIPageView<T>> implements
+        BaseIPagePresenter<BaseIPageView<T>, T> {
 
     protected int mPage,mPageSize=10;
 
     @Override
-    public void setModelAndView(BaseIPaginationView<T> view) {
+    public void setModelAndView(BaseIPageView<T> view) {
         super.setModelAndView(view);
     }
 
     @Override
-    public void setPaginationView(BaseIPaginationView<T> view) {
+    public void setPaginationView(BaseIPageView<T> view) {
         // 占位
     }
+
+
 
     @Override
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
@@ -35,15 +37,17 @@ public abstract class BaseSimplePaginationPresenter<T> extends
         mPage = 1;
 
         execute().compose(BaseSchedulersTransformer.transformer(mView))
-                .subscribe(new BasePaginationResponseObserver<>(this, mView, mPage));
+                .subscribe(new BasePageResponseObserver<>(this, mView, mPage));
     }
+
+
 
     @Override
     public void requestLoadMore() {
         ++mPage;
 
         execute().compose(BaseSchedulersTransformer.transformer(mView))
-                .subscribe(new BasePaginationResponseObserver<>(this, mView, mPage));
+                .subscribe(new BasePageResponseObserver<>(this, mView, mPage));
     }
 
     public void resetPage() {
@@ -55,7 +59,7 @@ public abstract class BaseSimplePaginationPresenter<T> extends
         requestRefresh();
     }
 
-    protected abstract Observable<BaseResponseRowsEntity<T>> execute();
+    protected abstract Observable<BaseResListEntity<T>> execute();
 
 
 

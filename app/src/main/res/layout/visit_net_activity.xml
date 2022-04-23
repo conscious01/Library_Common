@@ -11,7 +11,48 @@
         android:layout_width="@dimen/dp_250"
         android:text="单个请求"
         android:gravity="center"
+        style="@style/shape_btn_style"
         android:id="@+id/btn_visit"
+        app:shape_centerColor="@color/colorPrimaryDark"
+        android:layout_height="@dimen/dp_55" />
+
+    <com.hjq.shape.view.ShapeButton
+        android:layout_marginTop="@dimen/dp_25"
+        android:layout_width="@dimen/dp_250"
+        android:text="btn2"
+        android:gravity="center"
+        style="@style/shape_btn_style"
+        android:id="@+id/btn_2"
+        app:shape_centerColor="@color/colorPrimaryDark"
+        android:layout_height="@dimen/dp_55" />
+
+    <com.hjq.shape.view.ShapeButton
+        android:layout_marginTop="@dimen/dp_25"
+        android:layout_width="@dimen/dp_250"
+        android:text="btn3"
+        android:gravity="center"
+        style="@style/shape_btn_style"
+        android:id="@+id/btn_3"
+        app:shape_centerColor="@color/colorPrimaryDark"
+        android:layout_height="@dimen/dp_55" />
+
+    <com.hjq.shape.view.ShapeButton
+        android:layout_marginTop="@dimen/dp_25"
+        android:layout_width="@dimen/dp_250"
+        android:text="btn4"
+        android:gravity="center"
+        style="@style/shape_btn_style"
+        android:id="@+id/btn_4"
+        app:shape_centerColor="@color/colorPrimaryDark"
+        android:layout_height="@dimen/dp_55" />
+
+    <com.hjq.shape.view.ShapeButton
+        android:layout_marginTop="@dimen/dp_25"
+        android:layout_width="@dimen/dp_250"
+        android:text="btn5"
+        android:gravity="center"
+        style="@style/shape_btn_style"
+        android:id="@+id/btn_5"
         app:shape_centerColor="@color/colorPrimaryDark"
         android:layout_height="@dimen/dp_55" />
 

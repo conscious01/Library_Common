@@ -18,7 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 /**
  * 分页 View
  */
-public class BasePaginationView<T> implements BaseIPaginationView<T> {
+public class BasePageView<T> implements BaseIPageView<T> {
 
     private boolean isEnableLoadMore = false;
 
@@ -32,7 +32,7 @@ public class BasePaginationView<T> implements BaseIPaginationView<T> {
     private int mNotMoreFooterLayoutResId;
 
 
-    public BasePaginationView(RecyclerView recyclerView, @NonNull SmartRefreshLayout refreshLayout, @NonNull BaseIStatusView view) {
+    public BasePageView(RecyclerView recyclerView, @NonNull SmartRefreshLayout refreshLayout, @NonNull BaseIStatusView view) {
         this.mStatusView = view;
         this.mRecyclerView = recyclerView;
         this.mSmartRefreshLayout = refreshLayout;
@@ -152,17 +152,17 @@ public class BasePaginationView<T> implements BaseIPaginationView<T> {
         mSmartRefreshLayout.finishLoadMore();
     }
 
-    public BasePaginationView<T> setEmptyLayoutResId(int emptyLayoutResId) {
+    public BasePageView<T> setEmptyLayoutResId(int emptyLayoutResId) {
         this.mEmptyLayoutResId = emptyLayoutResId;
         return this;
     }
 
-    public BasePaginationView<T> setNotMoreFooterLayoutResId(int notMoreFooterLayoutResId) {
+    public BasePageView<T> setNotMoreFooterLayoutResId(int notMoreFooterLayoutResId) {
         this.mNotMoreFooterLayoutResId = notMoreFooterLayoutResId;
         return this;
     }
 
-    public BasePaginationView<T> addHeaderLayoutResId(int headerLayoutResId) {
+    public BasePageView<T> addHeaderLayoutResId(int headerLayoutResId) {
         this.mHeaderLayoutResId = headerLayoutResId;
         return this;
     }

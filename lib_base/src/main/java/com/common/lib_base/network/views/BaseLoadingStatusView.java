@@ -32,18 +32,7 @@ public class BaseLoadingStatusView implements BaseIStatusView {
 
     @Override
     public void loading() {
-        if (mLoading == null) {
-            mLoading = new XPopup.Builder(context)
-                    .dismissOnTouchOutside(false)
-                    .hasStatusBar(false)
-                    .dismissOnBackPressed(false)
-                    .asCustom(new BaseWaitProgressDialogMy(context, msg))
-                    .show();
-
-        } else {
-
-            mLoading.show();
-        }
+        showLoading();
     }
 
     @Override
@@ -58,11 +47,7 @@ public class BaseLoadingStatusView implements BaseIStatusView {
         mToastStatusView.failure(throwable);
     }
 
-    @Override
-    public void failureWithMethodName(Throwable throwable, String methodName) {
-        dismiss();
-        mToastStatusView.failureWithMethodName(throwable, methodName);
-    }
+
 
     @Override
     public void complete() {

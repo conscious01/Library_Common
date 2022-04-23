@@ -11,11 +11,7 @@ import io.reactivex.ObservableTransformer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
-/**
- * Author: LJD
- * Date: 2019/9/6
- * Desc: 转换请求
- */
+
 public class BaseSchedulersTransformer {
 
     /**
@@ -33,6 +29,33 @@ public class BaseSchedulersTransformer {
         // 防止不在主线，调用闪退
         if (Looper.getMainLooper() == Looper.myLooper() && view != null) {
             view.loading();
+        }
+
+        return upstream -> upstream
+                .compose(transformer())
+                .doOnComplete(() -> {
+                    //if (view != null) view.complete();
+                })
+                .doOnError(throwable -> {
+                    if (view != null) {
+                        if (throwable instanceof ConnectException) {
+
+                            view.offline();
+
+                        } else {
+                            view.failure(throwable);
+                        }
+                    }
+                });
+    }
+
+
+    public static <T> ObservableTransformer<T, T> transformer(BaseIStatusView view, boolean showLoading) {
+        // 防止不在主线，调用闪退
+        if (Looper.getMainLooper() == Looper.myLooper() && view != null) {
+            if (showLoading) {
+                view.loading();
+            }
         }
 
         return upstream -> upstream

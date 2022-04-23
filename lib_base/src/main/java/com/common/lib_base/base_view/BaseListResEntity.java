@@ -1,6 +1,6 @@
 package com.common.lib_base.base_view;
 
-import com.common.lib_base.base_view.BasicListResponseEntity.PageDataEntity;
+import com.common.lib_base.base_view.BaseListResEntity.PageDataEntity;
 import java.util.List;
 
 /**
@@ -8,17 +8,17 @@ import java.util.List;
  * Date: 2019/11/13
  * Desc: 列表基础模型
  */
-public class BaseListResponseEntity<T> extends BaseResponseEntity<PageDataEntity<T>> {
+public class BaseListResEntity<T> extends BaseResEntity<PageDataEntity<T>> {
 
-    public BaseListResponseEntity() {
+    public BaseListResEntity() {
     }
 
 
-    public BaseListResponseEntity(PageDataEntity<T> data) {
+    public BaseListResEntity(PageDataEntity<T> data) {
         super(data);
     }
 
-    public BaseListResponseEntity(PageDataEntity<T> data, int code, String msg) {
+    public BaseListResEntity(PageDataEntity<T> data, int code, String msg) {
         super(data, code, msg);
     }
 

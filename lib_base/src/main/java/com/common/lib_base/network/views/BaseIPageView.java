@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * 分页 view
  */
-public interface BaseIPaginationView<T> extends BaseIStatusView {
+public interface BaseIPageView<T> extends BaseIStatusView {
 
     void renderRefresh(List<T> refreshData);
 

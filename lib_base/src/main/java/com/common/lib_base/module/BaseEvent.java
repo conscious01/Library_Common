@@ -1,4 +1,4 @@
-package com.common.lib_base.moddule;
+package com.common.lib_base.module;
 
 /**
  * @author Mr.W

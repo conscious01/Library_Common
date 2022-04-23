@@ -187,10 +187,20 @@ dependencies {
     }
     //    api 'com.google.zxing:core:3.3.0'
 
-    //需要写shape的view
+    //不需要写shape的view
     api 'com.github.RuffianZhong:RWidgetHelper:androidx.v0.0.9'
 
+    //retrofit多个base url
     api 'me.jessyan:retrofit-url-manager:1.4.0'
+
+
+
+    //万能ui库
+    api 'com.github.xuexiangjys:XUI:1.1.9'
+    api('com.github.xuexiangjys:XQRCode:1.0.6') {
+        exclude group: "com.google.zxing"
+
+    }
 
 
 

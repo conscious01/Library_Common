@@ -2,6 +2,7 @@ package com.common.lib_base.network.views;
 
 import com.blankj.utilcode.util.LogUtils;
 
+import com.common.lib_base.network.exceptions.ExceptionHandler;
 import com.mondo.logger.Logger;
 
 import and.fast.statelayout.StateLayout;
@@ -50,7 +51,7 @@ public class BaseLayoutRequestStatusView implements BaseIStatusView {
 //            mStateLayout.showStateView(StateLayout.FAILURE_STATE, "");
 //        }
 
-        mStateLayout.showStateView(StateLayout.FAILURE_STATE, "");
+        mStateLayout.showStateView(StateLayout.FAILURE_STATE, ExceptionHandler.handleException(throwable).message);
 
 
     }

@@ -1,4 +1,4 @@
-package com.common.lib_base.common.utils;
+package com.common.myapplication.core;
 
 
 public class BaseUrlUtils {
@@ -13,12 +13,10 @@ public class BaseUrlUtils {
         return Holder.INSTANCE;
     }
 
-    /**
-     * @return 网络请求的retrofit设置的baseurl
-     */
+
     public String getRetrofitBaseUrl() {
 
-        return "http://parking.unioncore.vip";
+        return "http://iottest.unioncore.vip";
 
     }
 

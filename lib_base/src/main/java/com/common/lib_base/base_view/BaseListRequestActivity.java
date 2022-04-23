@@ -8,18 +8,23 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.viewholder.BaseViewHolder;
 import com.common.lib_base.common.utils.ActivityTitleHelper;
-import com.common.lib_base.network.presenter.BaseIPaginationPresenter;
+import com.common.lib_base.network.presenter.BaseIPagePresenter;
+import com.common.lib_base.network.presenter.BasePagePresenter;
+import com.common.lib_base.network.views.BasePageView;
 import com.example.lib_base.R;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnRefreshLoadMoreListener;
 
-public abstract class BaseListRequestActivity<P extends BaseIPaginationPresenter, T> extends BaseRequestActivity
+public abstract class BaseListRequestActivity<P extends BaseIPagePresenter, T> extends
+        BaseRequestActivity
         implements OnRefreshLoadMoreListener {
 
 
-    private SmartRefreshLayout mSmartRefreshLayout;
-    private RecyclerView mRecyclerView;
+    public SmartRefreshLayout refreshLayout;
+    public RecyclerView recyclerView;
+
+    private BasePagePresenter pagePresenter;
 
     @Override
     protected int getTitleLayoutRes() {
@@ -37,16 +42,24 @@ public abstract class BaseListRequestActivity<P extends BaseIPaginationPresenter
         ActivityTitleHelper.setTitle(this, getTitleRes());
         initView();
         // 列表
-        mRecyclerView.setAdapter(getAdapter());
-        mSmartRefreshLayout.setOnRefreshLoadMoreListener(this);
+        recyclerView.setAdapter(getAdapter());
+        refreshLayout.setOnRefreshLoadMoreListener(this);
+        initRecyclerView();
+        pagePresenter=getPresenter();
+
 
         // 请求
         //RefreshAndLoadMoreView<T> view = new RefreshAndLoadMoreView<>(mRecyclerView, mSmartRefreshLayout, this);
         //view.setEmptyLayoutResId(R.layout.view_state_layout_empty);
         //mRequestPresenter.setModelAndView(view);
+
+        pagePresenter.setModelAndView(new BasePageView<>(recyclerView, refreshLayout, this));
+        pagePresenter.requestRefresh();
+
     }
 
-    abstract protected @StringRes int getTitleRes();
+    abstract protected @StringRes
+    int getTitleRes();
 
     abstract protected BaseQuickAdapter<T, BaseViewHolder> getAdapter();
 
@@ -57,16 +70,20 @@ public abstract class BaseListRequestActivity<P extends BaseIPaginationPresenter
 
     @Override
     public void onRefresh(@NonNull RefreshLayout refreshLayout) {
-        //mRequestPresenter.requestRefresh();
+        pagePresenter.requestRefresh();
     }
 
     @Override
     public void onLoadMore(@NonNull RefreshLayout refreshLayout) {
-        //mRequestPresenter.requestLoadMore();
+        pagePresenter.requestLoadMore();
     }
 
     private void initView() {
-        mSmartRefreshLayout = findViewById(R.id.smart_refresh_layout);
-        mRecyclerView = findViewById(R.id.recycler_view);
+        refreshLayout = findViewById(R.id.smart_refresh_layout);
+        recyclerView = findViewById(R.id.recycler_view);
     }
+
+    protected abstract BasePagePresenter getPresenter();
+
+    protected abstract void initRecyclerView();
 }

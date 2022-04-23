@@ -49,8 +49,7 @@ public class MainActivity extends BaseActivity implements OnItemClickListener {
         showDataList.add("DataBinding 类");
         showDataList.add("使用baseVBActivity");
         showDataList.add("展示使用ViewBinding的弹窗");
-        showDataList.add("展示使用Retrofit");
-
+        showDataList.add("base 列表使用");
 
         mAdapter = new AdapterDemo(R.layout.item_tv);
         rv.setLayoutManager(new LinearLayoutManager(this));
@@ -167,8 +166,8 @@ public class MainActivity extends BaseActivity implements OnItemClickListener {
                         .show();
 
                 break;
-            case 7://展示使用Retrofit
-
+            case 7://base列表使用
+                startActivity(ListActivity.class);
 
                 break;
         }

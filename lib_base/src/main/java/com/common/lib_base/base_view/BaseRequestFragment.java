@@ -77,10 +77,7 @@ public abstract class BaseRequestFragment
         mRequestStateView.failure(throwable);
     }
 
-    @Override
-    public void failureWithMethodName(Throwable throwable, String methodName) {
-        mRequestStateView.failureWithMethodName(throwable,methodName);
-    }
+
 
     @Override
     public void complete() {

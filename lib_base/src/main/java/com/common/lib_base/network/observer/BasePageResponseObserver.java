@@ -2,19 +2,19 @@ package com.common.lib_base.network.observer;
 
 
 
-import com.common.lib_base.base_view.BaseResponseRowsEntity;
-import com.common.lib_base.network.views.BaseIPaginationView;
+import com.common.lib_base.base_view.BaseResListEntity;
+import com.common.lib_base.network.views.BaseIPageView;
 import com.common.lib_base.network.presenter.BaseRequestPresenter;
 import java.util.List;
 
-public class BasePaginationResponseObserver<T> extends
-        BaseResponseRowsObserver<BaseResponseRowsEntity<T>> {
+public class BasePageResponseObserver<T> extends
+        BaseResListObserver<BaseResListEntity<T>> {
 
     private final int mPage;
 
-    private final BaseIPaginationView mView;
+    private final BaseIPageView mView;
 
-    public BasePaginationResponseObserver(BaseRequestPresenter presenter, BaseIPaginationView view, int page) {
+    public BasePageResponseObserver(BaseRequestPresenter presenter, BaseIPageView view, int page) {
         super(presenter, view, null);
         this.mPage = page;
         this.mView = view;
@@ -22,7 +22,7 @@ public class BasePaginationResponseObserver<T> extends
 
 
     @Override
-    public void onNext(BaseResponseRowsEntity<T> entity) {
+    public void onNext(BaseResListEntity<T> entity) {
         super.onNext(entity);
 
         List<T> dataList = entity.getRows();

@@ -1,150 +1,99 @@
 package com.common.lib_base.network.observer;
 
-import android.text.TextUtils;
 import androidx.core.util.Consumer;
-import com.blankj.utilcode.util.LogUtils;
-import com.common.lib_base.base_view.BaseResponseEntity;
-import com.common.lib_base.network.views.BaseIResponseView;
+import com.common.lib_base.base_view.BaseResEntity;
+import com.common.lib_base.network.exceptions.ExceptionHandler;
 import com.common.lib_base.network.views.BaseIStatusView;
 import com.common.lib_base.network.presenter.BaseRequestPresenter;
-import com.mondo.logger.Logger;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 import java.net.ConnectException;
 
-public class BaseResponseObserver<T extends BaseResponseEntity> implements Observer<T> {
+public class BaseResponseObserver<T extends BaseResEntity> implements Observer<T> {
 
-    private BaseIStatusView mView;
+    private BaseIStatusView view;
 
-    private final Consumer<T> mConsumer;
+    private final Consumer<T> consume;
 
-    private final BaseRequestPresenter mPresenter;
+    private final BaseRequestPresenter persenter;
 
-    private String mMethodName;
+    private int SUCCESS_CODE = 200;
 
+    private boolean needAllData;
 
-    /**
-     * 不显示后台返回的msg，默认为false，即为展示，如需不展示，ResponseObserver构造方法里设置为true即可
-     */
-    private boolean mNotShowMsg;
+    public void setNeedAllData(boolean needAllData) {
+        this.needAllData = needAllData;
+    }
+
+    public void setSUCCESS_CODE(int SUCCESS_CODE) {
+        this.SUCCESS_CODE = SUCCESS_CODE;
+    }
 
     public BaseResponseObserver(BaseRequestPresenter presenter, BaseIStatusView view,
             Consumer<T> consumer) {
-        this.mView = view;
-        this.mConsumer = consumer;
-        this.mPresenter = presenter;
+        this.view = view;
+        this.consume = consumer;
+        this.persenter = presenter;
     }
 
-
-    public BaseResponseObserver(BaseRequestPresenter presenter, BaseIStatusView view,
-            Consumer<T> consumer,
-            boolean notShowMsg) {
-        this.mView = view;
-        this.mConsumer = consumer;
-        this.mPresenter = presenter;
-        this.mNotShowMsg = notShowMsg;
-    }
-
-    public BaseResponseObserver(BaseRequestPresenter presenter, BaseIResponseView view,
-            Consumer<T> consumer) {
-        this.mView = view;
-        this.mConsumer = consumer;
-        this.mPresenter = presenter;
-    }
-
-    public BaseResponseObserver(BaseRequestPresenter presenter, BaseIResponseView view,
-            Consumer<T> consumer, String methodName) {
-        this.mView = view;
-        this.mConsumer = consumer;
-        this.mPresenter = presenter;
-        this.mMethodName = methodName;
-    }
 
     @Override
     public void onSubscribe(Disposable d) {
-        this.mPresenter.add(d);
+        this.persenter.add(d);
     }
 
 
     @Override
     public void onNext(T t) {
 
-        if (t.getCode() != 0) { // 失败
-
-            if (mView instanceof BaseIResponseView) { //如果是IResponseView，就返回给单独处理
-                t.setMethodName(mMethodName);
-                mConsumer.accept(t);
-                mView.complete();
-                mView = null;
-                return;
-            }
-
-            Exception exception = null;
-
-            exception = new Exception(t.getMsg());
-
-            if (mNotShowMsg) {
-                return;
-            }
-            onError(exception);
-
-        } else if (mConsumer != null) { // 成功
-
-            if (mView instanceof BaseIResponseView) { //如果是IResponseView，就返回给单独处理
-                t.setMethodName(mMethodName);
-                mConsumer.accept(t);
-                mView.complete();
-                mView = null;
-                return;
-            }
-
+        if (needAllData) {
             try {
-
-                mConsumer.accept(t);
-
-                if (mView != null) {
-                    mView.complete();
+                consume.accept(t);
+                if (view != null) {
+                    view.complete();
                 }
-
             } catch (Exception e) {
-                if (mNotShowMsg) {
-                    return;
+                onError(e);
+            }
+            return;
+        }
+
+        if (t.getCode() == SUCCESS_CODE) {
+            try {
+                consume.accept(t);
+                if (view != null) {
+                    view.complete();
                 }
+            } catch (Exception e) {
                 onError(e);
             }
 
+        } else {
+            Exception exception = new Exception(t.getMsg());
+            onError(exception);
         }
+
 
     }
 
 
     @Override
     public void onError(Throwable e) {
-        if (mView != null) {
-            if (mNotShowMsg) {
-                LogUtils.i(e.toString());
-                return;
-            }
+        if (view != null) {
+
             if (e instanceof ConnectException) {
-                mView.offline();
+                view.offline();
             } else {
-                if (TextUtils.isEmpty(mMethodName)) {
-                    mView.failure(e);
-
-                } else {
-                    mView.failureWithMethodName(e, mMethodName);
-                }
-
+                view.failure(ExceptionHandler.handleException(e));
             }
         }
 
     }
 
-
     @Override
     public void onComplete() {
-        Logger.d("onComplete");
 
     }
+
 
 }

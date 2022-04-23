@@ -66,10 +66,7 @@ public abstract class BaseRequestActivity extends BaseActivity
         mStateView.failure(throwable);
     }
 
-    @Override
-    public void failureWithMethodName(Throwable throwable, String methodName) {
-        mStateView.failureWithMethodName(throwable,methodName);
-    }
+
 
     @Override
     public void complete() {

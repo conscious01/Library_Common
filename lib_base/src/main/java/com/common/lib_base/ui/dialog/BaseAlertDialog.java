@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import com.example.lib_base.R;
-import com.common.lib_base.moddule.EntityBaseDialog;
+import com.common.lib_base.module.EntityBaseDialog;
 import com.lxj.xpopup.core.CenterPopupView;
 
 /**

@@ -18,8 +18,6 @@ public interface BaseIStatusView extends BaseIView {
      */
     void failure(Throwable throwable);
 
-    default void failureWithMethodName(Throwable throwable, String methodName) {
-    }
 
     /**
      * 完成请求
@@ -27,15 +25,10 @@ public interface BaseIStatusView extends BaseIView {
     default void complete() {
     }
 
-    default void completeWithMethodName(String methodName) {
-    }
-
-
     /**
      * 空数据
      */
     default void empty(CharSequence charSequence) {
-
     }
 
 }

@@ -5,7 +5,7 @@ import com.blankj.utilcode.util.LogUtils;
 import java.util.List;
 
 
-public class BaseResponseRowsEntity<T> {
+public class BaseResListEntity<T> {
 
     private List<T> rows;
     private int code;
@@ -26,21 +26,21 @@ public class BaseResponseRowsEntity<T> {
         this.methodName = methodName;
     }
 
-    public BaseResponseRowsEntity() {
+    public BaseResListEntity() {
     }
 
-    public BaseResponseRowsEntity(List<T>  rows) {
+    public BaseResListEntity(List<T>  rows) {
         this.code = 0;
         this.rows = rows;
     }
 
-    public BaseResponseRowsEntity(List<T>  rows, int code, String msg) {
+    public BaseResListEntity(List<T>  rows, int code, String msg) {
         this.rows = rows;
         this.code = code;
         this.msg = msg;
     }
 
-    public BaseResponseRowsEntity(List<T> rows, int code, String msg, String methodName) {
+    public BaseResListEntity(List<T> rows, int code, String msg, String methodName) {
         this.rows = rows;
         this.code = code;
         this.msg = msg;
