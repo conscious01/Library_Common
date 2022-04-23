@@ -1,7 +1,7 @@
 package demon.mine.others;
 
 import android.os.Bundle;
-import com.example.lib_base.base.BaseActivity;
+import com.common.lib_base.base.BaseActivity;
 import com.example.myapplication.R;
 
 

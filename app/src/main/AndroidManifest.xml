@@ -12,9 +12,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name=".MyApp"
+        android:name="com.common.myapplication.MyApp"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.common.myapplication.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,11 +22,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".KotlinActivity" />
-        <activity android:name=".ImageActivity" />
-        <activity android:name=".VisitNetActivity" />
-        <activity android:name=".DataBindingClass" />
-        <activity android:name=".UseBaseVBActivity" />
+        <activity android:name="com.common.myapplication.KotlinActivity" />
+        <activity android:name="com.common.myapplication.ImageActivity" />
+        <activity android:name="com.common.myapplication.VisitNetActivity" />
+        <activity android:name="com.common.myapplication.DataBindingClass" />
+        <activity android:name="com.common.myapplication.UseBaseVBActivity" />
 
         <meta-data
             android:name="design_width_in_dp"
@@ -36,7 +36,7 @@
             android:value="784" />
 
 
-        <receiver android:name=".NotificationClickReceiver"></receiver>
+        <receiver android:name="com.common.myapplication.NotificationClickReceiver"></receiver>
 
     </application>
 
