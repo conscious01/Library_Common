@@ -88,10 +88,13 @@ dependencies {
 
     coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.0.9'
 
-    implementation project(path: ':lib_base')
+//    implementation project(path: ':lib_base')
 
-//    implementation 'com.github.conscious01:MyDemo:1.0.0'
 
+    api('com.github.conscious01:Library_Common:1.0.0') {
+        exclude group: 'com.davemorrissey.labs'
+        exclude group: "com.google.zxing"
+    }
 
 
 

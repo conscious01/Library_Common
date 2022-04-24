@@ -205,7 +205,6 @@ dependencies {
     api 'com.github.xuexiangjys:XUI:1.1.9'
     api('com.github.xuexiangjys:XQRCode:1.0.6') {
         exclude group: "com.google.zxing"
-
     }
 
 
