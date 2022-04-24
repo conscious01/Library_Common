@@ -9,6 +9,9 @@ import com.common.myapplication.adapter.MsgAdapter;
 import com.common.myapplication.network.MsgListPresenter;
 import com.example.myapplication.R;
 
+/**
+ * 列表使用demo
+ */
 public class ListActivity extends BaseListRequestActivity {
 
     @Override
@@ -28,7 +31,6 @@ public class ListActivity extends BaseListRequestActivity {
 
     @Override
     protected void initRecyclerView() {
-        recyclerView.setLayoutManager(ViewUtils.getRVVerticalLayoutManager(this));
         recyclerView.addItemDecoration(ViewUtils.getRVVerticalDivider(this));
     }
 

@@ -455,4 +455,12 @@
     <dimen name="bottom_icon_w_h">30dp</dimen>
     <dimen name="bottom_text_size">14sp</dimen>
     <dimen name="dp_main_button_radius">10dp</dimen>
+
+    <!--多状态布局-->
+
+    <dimen name="state_layout_placeholder_image_size">192dp</dimen>
+    <dimen name="state_layout_title_size">18sp</dimen>
+    <dimen name="state_layout_subtitle_size">14sp</dimen>
+    <!--多状态布局-->
+
 </resources>

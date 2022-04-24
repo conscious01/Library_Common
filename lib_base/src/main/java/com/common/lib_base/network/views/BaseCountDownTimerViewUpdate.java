@@ -31,13 +31,13 @@ public class BaseCountDownTimerViewUpdate implements
     }
 
     @Override
-    public void offline() {
-        mStatusView.offline();
+    public void offline(boolean showErrorMsg) {
+        mStatusView.offline(showErrorMsg);
     }
 
     @Override
-    public void failure(Throwable throwable) {
-        mStatusView.failure(throwable);
+    public void failure(Throwable throwable,boolean showErrorMsg) {
+        mStatusView.failure(throwable,showErrorMsg);
     }
 
     @Override

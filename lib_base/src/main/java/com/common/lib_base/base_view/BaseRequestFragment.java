@@ -7,16 +7,15 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
-import and.fast.statelayout.OnAnewRequestNetworkListener;
-import and.fast.statelayout.StateLayout;
+import com.common.lib_base.multiple_state.OnStateLayoutClickListener;
+import com.common.lib_base.multiple_state.StateLayout;
 import com.common.lib_base.network.views.BaseIStatusView;
 import com.common.lib_base.network.views.BaseMultipleStateView;
 
 public abstract class BaseRequestFragment
 //        <P extends RequestPresenter>
         extends BaseFragment implements
-        OnAnewRequestNetworkListener,
+        OnStateLayoutClickListener,
         BaseIStatusView {
 
 //    protected P mPresenter;
@@ -68,13 +67,13 @@ public abstract class BaseRequestFragment
     }
 
     @Override
-    public void offline() {
-        mRequestStateView.offline();
+    public void offline(boolean showErrorMsg) {
+        mRequestStateView.offline(showErrorMsg);
     }
 
     @Override
-    public void failure(Throwable throwable) {
-        mRequestStateView.failure(throwable);
+    public void failure(Throwable throwable,boolean showErrorMsg) {
+        mRequestStateView.failure(throwable,showErrorMsg);
     }
 
 
@@ -90,7 +89,7 @@ public abstract class BaseRequestFragment
     }
 
     @Override
-    public void onAnewRequestNetwork() {
+    public void onRetry() {
         //mPresenter.anewRequest();
     }
 

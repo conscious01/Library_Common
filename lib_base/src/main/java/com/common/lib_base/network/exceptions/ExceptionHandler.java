@@ -22,11 +22,14 @@ public class ExceptionHandler {
         if (e instanceof HttpException) {
             HttpException httpException = (HttpException) e;
             ex = new ResponeThrowable(e, ERROR.HTTP_ERROR);
+            ex.code=httpException.code();
             switch (httpException.code()) {
+                case REQUEST_TIMEOUT:
+                    ex.message = "网络超时";
+                    break;
                 case UNAUTHORIZED:
                 case FORBIDDEN:
                 case NOT_FOUND:
-                case REQUEST_TIMEOUT:
                 case GATEWAY_TIMEOUT:
                 case INTERNAL_SERVER_ERROR:
                 case BAD_GATEWAY:

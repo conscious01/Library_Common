@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--多状态布局-->
+    <integer name="anew_request_delay_millis">500</integer>
+    <!--多状态布局-->
+
+</resources>

@@ -245,4 +245,8 @@
     <color name="hesuan_24">#286fe4</color>
     <color name="hesuan_48">#8f72de</color>
     <color name="hesuan_72">#14a83b</color>
+
+    <color name="state_layout_title_color">#a5d43f3a</color>
+    <color name="state_layout_subtitle_color">#708090</color>
+    <color name="state_layout_background_color">#6b8e23</color>
 </resources>

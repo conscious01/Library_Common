@@ -46,13 +46,6 @@ public abstract class BaseListRequestActivity<P extends BaseIPagePresenter, T> e
         refreshLayout.setOnRefreshLoadMoreListener(this);
         initRecyclerView();
         pagePresenter=getPresenter();
-
-
-        // 请求
-        //RefreshAndLoadMoreView<T> view = new RefreshAndLoadMoreView<>(mRecyclerView, mSmartRefreshLayout, this);
-        //view.setEmptyLayoutResId(R.layout.view_state_layout_empty);
-        //mRequestPresenter.setModelAndView(view);
-
         pagePresenter.setModelAndView(new BasePageView<>(recyclerView, refreshLayout, this));
         pagePresenter.requestRefresh();
 
@@ -64,8 +57,8 @@ public abstract class BaseListRequestActivity<P extends BaseIPagePresenter, T> e
     abstract protected BaseQuickAdapter<T, BaseViewHolder> getAdapter();
 
     @Override
-    public void onAnewRequestNetwork() {
-        //mRequestPresenter.requestRefresh();
+    public void onRetry() {
+        pagePresenter.requestRefresh();
     }
 
     @Override

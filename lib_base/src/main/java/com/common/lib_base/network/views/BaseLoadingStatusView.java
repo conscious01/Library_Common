@@ -36,15 +36,15 @@ public class BaseLoadingStatusView implements BaseIStatusView {
     }
 
     @Override
-    public void offline() {
+    public void offline(boolean showErrorMsg) {
         dismiss();
-        mToastStatusView.offline();
+        mToastStatusView.offline(showErrorMsg);
     }
 
     @Override
-    public void failure(Throwable throwable) {
+    public void failure(Throwable throwable,boolean showErrorMsg) {
         dismiss();
-        mToastStatusView.failure(throwable);
+        mToastStatusView.failure(throwable,showErrorMsg);
     }
 
 

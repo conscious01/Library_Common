@@ -503,9 +503,10 @@ public abstract class BaseActivity extends SupportActivity {
     }
 
     protected void initStatusBar() {
-
         // 设置全屏，状态栏也占据
-        StatusBarUtil.setTranslucentForImageView(this, 0, null);
+        StatusBarUtil.setTransparentForImageView(this,null);
+
+//        StatusBarUtil.setTranslucentForImageView(this, 0, null);
     }
 
     @Override

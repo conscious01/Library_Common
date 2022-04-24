@@ -75,8 +75,8 @@ dependencies {
     //文字排列
     api 'com.hyman:flowlayout-lib:1.1.2'
 
-    //多状态布局
-    api 'com.github.and-fast:state-layout:1.0.0'
+    //多状态布局 已经装载到lib里了
+//    api 'com.github.and-fast:state-layout:1.0.0'
 
     //下拉刷新和上拉加载
     api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'

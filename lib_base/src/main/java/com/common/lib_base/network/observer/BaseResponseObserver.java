@@ -21,6 +21,12 @@ public class BaseResponseObserver<T extends BaseResEntity> implements Observer<T
 
     private boolean needAllData;
 
+    private boolean showErrorMsg=true;
+
+    public void setShowErrorMsg(boolean showErrorMsg) {
+        this.showErrorMsg = showErrorMsg;
+    }
+
     public void setNeedAllData(boolean needAllData) {
         this.needAllData = needAllData;
     }
@@ -82,9 +88,9 @@ public class BaseResponseObserver<T extends BaseResEntity> implements Observer<T
         if (view != null) {
 
             if (e instanceof ConnectException) {
-                view.offline();
+                view.offline(showErrorMsg);
             } else {
-                view.failure(e);
+                view.failure(e,showErrorMsg);
             }
         }
 

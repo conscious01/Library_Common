@@ -22,6 +22,8 @@ public class BaseResListObserver<T extends BaseResListEntity> implements Observe
 
     private final BaseRequestPresenter mPresenter;
 
+    private boolean showErrorMsg=true;
+
 
     public BaseResListObserver(BaseRequestPresenter presenter, BaseIStatusView view,
             Consumer<T> consumer) {
@@ -74,9 +76,9 @@ public class BaseResListObserver<T extends BaseResListEntity> implements Observe
         if (mView != null) {
 
             if (e instanceof ConnectException) {
-                mView.offline();
+                mView.offline(showErrorMsg);
             } else {
-                mView.failure(e);
+                mView.failure(e,showErrorMsg);
 
             }
         }

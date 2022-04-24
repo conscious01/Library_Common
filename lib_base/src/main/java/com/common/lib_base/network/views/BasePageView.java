@@ -122,9 +122,9 @@ public class BasePageView<T> implements BaseIPageView<T> {
     }
 
     @Override
-    public void offline() {
+    public void offline(boolean showErrorMsg) {
         if (mAdapter.getData().isEmpty()) {
-            mStatusView.offline();
+            mStatusView.offline(showErrorMsg);
 
         } else {
             LogUtils.d("网络错误");
@@ -134,9 +134,9 @@ public class BasePageView<T> implements BaseIPageView<T> {
     }
 
     @Override
-    public void failure(Throwable throwable) {
+    public void failure(Throwable throwable,boolean showErrorMsg) {
         if (mAdapter.getData().isEmpty()) {
-            mStatusView.failure(throwable);
+            mStatusView.failure(throwable,showErrorMsg);
             mSmartRefreshLayout.finishRefresh();
 
         } else {

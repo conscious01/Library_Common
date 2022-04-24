@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/state_layout_background_color">
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        tools:progress="50" />
+
+    <TextView
+        android:id="@+id/tv_loading_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progress"
+        android:gravity="center_horizontal"
+        android:paddingTop="16dp"
+        android:text="@string/state_layout_loading_title"
+        android:textColor="#CCC" />
+
+</RelativeLayout>

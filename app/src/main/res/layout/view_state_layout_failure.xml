@@ -9,28 +9,38 @@
     android:orientation="vertical">
 
     <ImageView
+        android:src="?attr/failure_image_src"
         android:layout_width="@dimen/state_layout_placeholder_image_size"
         android:layout_height="@dimen/state_layout_placeholder_image_size"
-        android:src="?attr/empty_image_src"
         tools:background="#666" />
 
     <TextView
-        android:id="@+id/tv_empty_title"
+        android:id="@+id/tv_failure_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="12dp"
-        android:text="@string/state_layout_empty_title"
+        android:text="@string/state_layout_failure_title"
         android:textColor="@color/state_layout_title_color"
         android:textSize="@dimen/state_layout_title_size" />
 
     <TextView
-        android:id="@+id/tv_empty_subtitle"
+        android:id="@+id/tv_failure_subtitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/state_layout_empty_subtitle"
+        android:text="@string/state_layout_failure_subtitle"
         android:textColor="@color/state_layout_subtitle_color"
         android:textSize="@dimen/state_layout_subtitle_size" />
+
+    <TextView
+        android:id="@+id/tv_failure_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:textColor="#FF6966"
+        android:textSize="12sp"
+        tools:text="错误信息。。。" />
 
 </LinearLayout>

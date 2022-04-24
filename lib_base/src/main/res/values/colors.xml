@@ -10,7 +10,6 @@
 
     <color name="backgroundColor">#FFFFFF</color>
     <color name="backgroundColorSecondary">#F2EFEB</color>
-    <color name="state_layout_background_color">@android:color/transparent</color>
 
 
     <color name="color_c7c7c9">#FFC7C7C9</color>
@@ -254,5 +253,10 @@
     <color name="darkviolet">#9400d3</color><!--暗紫罗兰色 -->
     <color name="mediumorchid">#ba55d3</color><!--中粉紫色 -->
 
+    <!--多状态布局-->
+    <color name="state_layout_title_color">#333</color>
+    <color name="state_layout_subtitle_color">#999</color>
+    <color name="state_layout_background_color">#FFF</color>
+    <!--多状态布局-->
 
 </resources>

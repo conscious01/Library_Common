@@ -3,8 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/smart_refresh_layout"
     android:layout_width="match_parent"
-    android:fitsSystemWindows="true"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
+
+    <!--  ⬆️ 需要去掉这个，不然就会出现rv距离顶部有一定的距离的问题
+       android:fitsSystemWindows="true"
+    -->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"

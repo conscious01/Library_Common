@@ -127,4 +127,17 @@
 
     </declare-styleable>
 
+    <!--多状态布局-->
+    <declare-styleable name="StateLayout">
+        <attr name="failure_res" format="reference" />
+        <attr name="empty_res" format="reference" />
+        <attr name="loading_res" format="reference" />
+        <attr name="offline_res" format="reference" />
+    </declare-styleable>
+
+    <attr name="empty_image_src" format="reference" />
+    <attr name="failure_image_src" format="reference" />
+    <attr name="offline_image_src" format="reference" />
+    <!--多状态布局-->
+
 </resources>

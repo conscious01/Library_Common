@@ -41,7 +41,7 @@ public abstract class BaseListRequestFragment<P extends BaseIPagePresenter, T> e
     abstract protected BaseQuickAdapter<T, BaseViewHolder> getAdapter();
 
     @Override
-    public void onAnewRequestNetwork() {
+    public void onRetry() {
         //mRequestPresenter.requestRefresh();
     }
 

@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:name="com.common.myapplication.MyApp"
-        android:theme="@style/AppTheme">
+        android:theme="@style/MyAppTheme">
         <activity android:name="com.common.myapplication.ui.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,6 +28,7 @@
         <activity android:name="com.common.myapplication.ui.activity.DataBindingClass" />
         <activity android:name="com.common.myapplication.ui.activity.UseBaseVBActivity" />
         <activity android:name="com.common.myapplication.ui.activity.ListActivity" />
+        <activity android:name="com.common.myapplication.ui.activity.StatusBarActivity" />
 
         <meta-data
             android:name="design_width_in_dp"

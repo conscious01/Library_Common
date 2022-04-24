@@ -40,10 +40,36 @@ public class BaseSchedulersTransformer {
                     if (view != null) {
                         if (throwable instanceof ConnectException) {
 
-                            view.offline();
+                            view.offline(true);
 
                         } else {
-                            view.failure(throwable);
+                            view.failure(throwable,true);
+                        }
+                    }
+                });
+    }
+
+
+    public static <T> ObservableTransformer<T, T> transformerErrorMsgStatus(BaseIStatusView view,boolean showErrorMsg) {
+
+        // 防止不在主线，调用闪退
+        if (Looper.getMainLooper() == Looper.myLooper() && view != null) {
+            view.loading();
+        }
+
+        return upstream -> upstream
+                .compose(transformer())
+                .doOnComplete(() -> {
+                    //if (view != null) view.complete();
+                })
+                .doOnError(throwable -> {
+                    if (view != null) {
+                        if (throwable instanceof ConnectException) {
+
+                            view.offline(showErrorMsg);
+
+                        } else {
+                            view.failure(throwable,showErrorMsg);
                         }
                     }
                 });
@@ -67,10 +93,10 @@ public class BaseSchedulersTransformer {
                     if (view != null) {
                         if (throwable instanceof ConnectException) {
 
-                            view.offline();
+                            view.offline(showLoading);
 
                         } else {
-                            view.failure(throwable);
+                            view.failure(throwable,showLoading);
                         }
                     }
                 });

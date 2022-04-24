@@ -10,13 +10,13 @@ public interface BaseIStatusView extends BaseIView {
     /**
      * 离线、无网络
      */
-    default void offline() {
+    default void offline(boolean showErrorMsg) {
     }
 
     /**
      * 失败
      */
-    void failure(Throwable throwable);
+    void failure(Throwable throwable,boolean showErrorMsg);
 
 
     /**

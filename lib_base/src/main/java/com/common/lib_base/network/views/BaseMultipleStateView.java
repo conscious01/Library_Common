@@ -2,10 +2,11 @@ package com.common.lib_base.network.views;
 
 import com.blankj.utilcode.util.LogUtils;
 
+import com.common.lib_base.multiple_state.StateLayout;
 import com.common.lib_base.network.exceptions.ExceptionHandler;
+import com.common.lib_base.network.exceptions.ExceptionHandler.ResponeThrowable;
 import com.mondo.logger.Logger;
 
-import and.fast.statelayout.StateLayout;
 
 /**
  * 多状态布局
@@ -33,7 +34,7 @@ public class BaseMultipleStateView implements BaseIStatusView {
     }
 
     @Override
-    public void offline() {
+    public void offline(boolean showErrorMsg) {
         if (mStateLayout == null) {
             Logger.i("offline, %s", "状态布局未初始化");
             return;
@@ -43,7 +44,7 @@ public class BaseMultipleStateView implements BaseIStatusView {
     }
 
     @Override
-    public void failure(Throwable throwable) {
+    public void failure(Throwable throwable,boolean showErrorMsg) {
         if (mStateLayout == null) {
             Logger.i("failure, %s", "状态布局未初始化");
             return;
@@ -58,7 +59,9 @@ public class BaseMultipleStateView implements BaseIStatusView {
 //            mStateLayout.showStateView(StateLayout.FAILURE_STATE, "");
 //        }
 
-        mStateLayout.showStateView(StateLayout.FAILURE_STATE, ExceptionHandler.handleException(throwable).message);
+        ResponeThrowable responeThrowable = ExceptionHandler.handleException(throwable);
+        String errorMsg = responeThrowable.code + " " + responeThrowable.message;
+        mStateLayout.showStateView(StateLayout.FAILURE_STATE,errorMsg);
 
 
     }

@@ -160,12 +160,18 @@ public class ViewUtils {
     }
 
 
-    /*获取 6300.00 券 数字和后面单位大小不一样的SpannableString，拿到之后直接setText就行*/
-    public static SpannableString getMoneyAndCouponString(String moneyString) {
-        SpannableString s1 = new SpannableString(moneyString);
-        s1.setSpan(new AbsoluteSizeSpan(18, true), 0, s1.length() - 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        s1.setSpan(new AbsoluteSizeSpan(12, true), s1.length() - 1, s1.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        return s1;
+
+
+    private static long lastClickTime;
+
+    public static boolean ifFastClick() {
+        long time = System.currentTimeMillis();
+        long timeD = time - lastClickTime;
+        if (0 < timeD && timeD < 1000) {
+            return true;
+        }
+        lastClickTime = time;
+        return false;
     }
 
 }

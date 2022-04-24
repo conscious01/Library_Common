@@ -1,4 +1,17 @@
 <resources>
 
+    <style name="MyAppTheme" parent="BaseAppTheme">
 
+        <item name="android:windowFullscreen">false</item>
+        <!--多状态布局-->
+        <item name="failure_res">@layout/view_state_layout_failure</item>
+        <item name="empty_res">@layout/view_state_layout_empty</item>
+        <item name="loading_res">@layout/view_state_layout_loading</item>
+        <item name="offline_res">@layout/view_state_layout_offline</item>
+        <item name="empty_image_src">@drawable/icon_empty_data</item>
+        <item name="failure_image_src">@drawable/icon_failure</item>
+        <item name="offline_image_src">@drawable/icon_offline</item>
+        <!--多状态布局-->
+
+    </style>
 </resources>

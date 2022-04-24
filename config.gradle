@@ -70,7 +70,7 @@ ext {
             "calendar"                      : "com.haibin:calendarview:3.6.9",
             //文字排列
             "flow-layout"                   : "com.hyman:flowlayout-lib:1.1.2",
-            //多状态布局 //todo 替换成我的
+            //多状态布局
             "state-layout"                  : "com.github.and-fast:state-layout:1.0.1",
             //下拉刷新和上拉加载
             "smart-refresh-layout"          : "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0",
