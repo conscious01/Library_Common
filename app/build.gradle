@@ -90,12 +90,10 @@ dependencies {
 
     implementation project(path: ':lib_base')
 
-    // 随申码 相关
-    implementation 'com.gitee.l0km:skcap:1.5.2'
-//    implementation files('libs/skcap-1.0.0.aar')
-//    implementation files('libs/JtSignJar.aar')
-    implementation(name: 'JtSignJar', ext: 'aar')
-    implementation(name: 'skcap-1.0.0', ext: 'aar')
+//    implementation 'com.github.conscious01:MyDemo:1.0.0'
+
+
+
 
 
 }

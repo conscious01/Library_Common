@@ -59,10 +59,6 @@ dependencies {
     api 'androidx.legacy:legacy-support-v4:1.0.0'
 
 
-    /*
-
-    * 解决依赖冲突，com.davemorrissey.labs 这个 BigImageViewPager中也用到了
-    */
     //弹窗
 //    api 'com.lxj:xpopup:2.0.8-rc5'
     api('com.github.li-xiaojun:XPopup:2.7.6') {
@@ -140,7 +136,17 @@ dependencies {
 
 //    api rootProject.ext.dependencies["constraint_layout"]
 
-    api 'com.github.SherlockGougou:BigImageViewPager:v4_6.1.1'
+
+    /*
+
+    * 解决依赖冲突，com.davemorrissey.labs 这个 BigImageViewPager中也用到了
+    */
+    api ('com.github.SherlockGougou:BigImageViewPager:v4_6.1.1'){
+        exclude group: "com.davemorrissey.labs"
+    }
+
+
+
 
     //正确，错误的吐司弹窗
     api 'com.github.bboylin:UniversalToast:v1.0.4'
