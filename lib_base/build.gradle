@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
+
 
 android {
     compileSdkVersion 30
@@ -112,8 +114,8 @@ dependencies {
     api 'io.reactivex.rxjava2:rxandroid:2.1.0'
 //    api 'com.jakewharton.rxbinding2:rxbinding:2.2.0'
 
-    api 'com.jakewharton:butterknife:10.0.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+    api 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
 
     //请求权限
     api 'pub.devrel:easypermissions:3.0.0'
@@ -152,9 +154,9 @@ dependencies {
     api 'com.github.bboylin:UniversalToast:v1.0.4'
 
     /*牛逼的fragmentationx库，杜绝fragment的各种问题*/
-    api rootProject.ext.dependencies["fragmentationx-core"]
-    api rootProject.ext.dependencies["fragmentationx"]
-    api rootProject.ext.dependencies["eventbus-activity-scope"]
+    api 'me.yokeyword:fragmentationx-core:1.0.0'
+    api 'me.yokeyword:fragmentationx:1.0.0'
+    api 'me.yokeyword:eventbus-activity-scope:1.1.0'
 
 
     //图片选择

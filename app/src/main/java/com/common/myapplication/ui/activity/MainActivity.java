@@ -50,6 +50,7 @@ public class MainActivity extends BaseActivity implements OnItemClickListener {
         showDataList.add("展示使用ViewBinding的弹窗");
         showDataList.add("base 列表使用");
         showDataList.add("状态栏使用");
+        showDataList.add("使用butter knife");
 
         mAdapter = new AdapterDemo(R.layout.item_tv);
         rv.setLayoutManager(new LinearLayoutManager(this));
@@ -124,6 +125,8 @@ public class MainActivity extends BaseActivity implements OnItemClickListener {
             case 8://状态栏使用
                 startActivity(StatusBarActivity.class);
                 break;
+            case 9://使用butter knife
+                startActivity(UseButterKnifeActivity.class);
         }
     }
 }
