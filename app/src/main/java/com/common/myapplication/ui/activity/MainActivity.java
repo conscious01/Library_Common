@@ -51,6 +51,7 @@ public class MainActivity extends BaseActivity implements OnItemClickListener {
         showDataList.add("base 列表使用");
         showDataList.add("状态栏使用");
         showDataList.add("使用butter knife");
+        showDataList.add("使用Base VB Request Activity");
 
         mAdapter = new AdapterDemo(R.layout.item_tv);
         rv.setLayoutManager(new LinearLayoutManager(this));
@@ -127,6 +128,9 @@ public class MainActivity extends BaseActivity implements OnItemClickListener {
                 break;
             case 9://使用butter knife
                 startActivity(UseButterKnifeActivity.class);
+            case 10: //使用Base VB Request Activity
+                startActivity(UseBaseVBRequestActivity.class);
+                break;
         }
     }
 }

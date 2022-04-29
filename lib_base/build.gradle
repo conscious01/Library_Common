@@ -1,6 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.jakewharton.butterknife'
-
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 30
@@ -38,7 +37,10 @@ android {
 
         }
     }
-//    sourceSets { main { assets.srcDirs = ['lib'] } }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
 
 }
 
@@ -184,7 +186,8 @@ dependencies {
     api 'com.github.getActivity:ShapeView:6.2'
 
     //使用反射封装的ViewBinding基类
-    api 'com.github.DylanCaiCoding.ViewBindingKTX:viewbinding-base:2.0.2'
+    api 'com.github.DylanCaiCoding.ViewBindingKTX:viewbinding-base:2.0.5'
+
 
     api('cn.yipianfengye.android:zxing-library:2.2') {
         exclude group: "com.google.zxing"
@@ -209,6 +212,8 @@ dependencies {
         exclude group: "com.google.zxing"
     }
 
+    api 'androidx.core:core-ktx:1.6.0'
+    api "androidx.fragment:fragment-ktx:1.3.6"
 
 
 }

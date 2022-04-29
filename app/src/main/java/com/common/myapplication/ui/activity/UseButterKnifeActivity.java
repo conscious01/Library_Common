@@ -15,6 +15,7 @@ public class UseButterKnifeActivity extends BaseActivity {
     @BindView(R.id.btn_)
     ShapeButton btn;
 
+
     @Override
     protected int getContentLayoutId() {
         return R.layout.activity_use_butter_knife;

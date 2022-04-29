@@ -30,6 +30,7 @@
         <activity android:name="com.common.myapplication.ui.activity.ListActivity" />
         <activity android:name="com.common.myapplication.ui.activity.StatusBarActivity" />
         <activity android:name="com.common.myapplication.ui.activity.UseButterKnifeActivity" />
+        <activity android:name="com.common.myapplication.ui.activity.UseBaseVBRequestActivity" />
 
         <meta-data
             android:name="design_width_in_dp"

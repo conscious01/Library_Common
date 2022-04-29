@@ -1,7 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'com.jakewharton.butterknife'
 //⬇️这个插件会与butterknife冲突
 //apply plugin: 'kotlin-kapt'
 
@@ -99,10 +98,12 @@ dependencies {
     implementation project(path: ':lib_base')
 
 
-//    api('com.github.conscious01:Library_Common:1.0.1') {
+//    api('com.github.conscious01:Library_Common:1.0.2') {
 //        exclude group: 'com.davemorrissey.labs'
 //        exclude group: "com.google.zxing"
 //    }
+
+    implementation 'com.github.DylanCaiCoding.ViewBindingKTX:viewbinding-ktx:2.0.5'
 
 
 }
