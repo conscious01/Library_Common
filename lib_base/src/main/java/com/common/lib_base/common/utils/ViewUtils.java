@@ -22,7 +22,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.SizeUtils;
 import com.common.lib_base.common.RVItemDecoration;
+import com.common.lib_base.module.EntityBaseDialog;
+import com.common.lib_base.ui.dialog.BaseAlertDialog;
 import com.example.lib_base.R;
+import com.lxj.xpopup.XPopup;
 
 
 public class ViewUtils {
@@ -172,6 +175,17 @@ public class ViewUtils {
         }
         lastClickTime = time;
         return false;
+    }
+
+    public static void showFriendAlertDialog(Context context, EntityBaseDialog entityBaseDialog) {
+
+        new XPopup.Builder(context)
+                .dismissOnTouchOutside(false)
+                .hasStatusBar(false)
+                .dismissOnBackPressed(false)
+                .asCustom(new BaseAlertDialog(context, entityBaseDialog))
+                .show();
+
     }
 
 }

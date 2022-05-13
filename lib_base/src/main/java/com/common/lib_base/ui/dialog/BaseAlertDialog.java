@@ -75,6 +75,15 @@ public class BaseAlertDialog extends CenterPopupView {
         if (!TextUtils.isEmpty(entityBaseDialog.getConfirmText())) {
             btnConfirm.setText(entityBaseDialog.getConfirmText());
         }
+
+        if (entityBaseDialog.getOnConfirmClick()!=null) {
+            onConfirmClick = entityBaseDialog.getOnConfirmClick();
+        }
+
+        if (entityBaseDialog.getOnCancelBtnClick()!=null) {
+            onCancelBtnClick = entityBaseDialog.getOnCancelBtnClick();
+        }
+
         installEvents();
         activity.getWindow().setWindowAnimations(R.style.dialog_anim1);
     }

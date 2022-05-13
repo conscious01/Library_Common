@@ -1,5 +1,7 @@
 package com.common.lib_base.module;
 
+import com.common.lib_base.ui.dialog.BaseAlertDialog.OnBtnClick;
+
 /**
  * @author Mr.W
  * @since 11/3/2022 10:30 pm
@@ -9,6 +11,27 @@ public class EntityBaseDialog {
     String title;
     String content;
     String confirmText;
+
+    private OnBtnClick onConfirmClick ;
+
+    private OnBtnClick onCancelBtnClick ;
+
+    public OnBtnClick getOnConfirmClick() {
+        return onConfirmClick;
+    }
+
+    public void setOnConfirmClick(OnBtnClick onConfirmClick) {
+        this.onConfirmClick = onConfirmClick;
+    }
+
+    public OnBtnClick getOnCancelBtnClick() {
+        return onCancelBtnClick;
+    }
+
+    public void setOnCancelBtnClick(
+            OnBtnClick onCancelBtnClick) {
+        this.onCancelBtnClick = onCancelBtnClick;
+    }
 
     public String getConfirmText() {
         return confirmText;

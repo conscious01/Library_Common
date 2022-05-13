@@ -103,7 +103,7 @@ dependencies {
 //        exclude group: "com.google.zxing"
 //    }
 
-    implementation 'com.github.DylanCaiCoding.ViewBindingKTX:viewbinding-ktx:2.0.5'
+//    implementation 'com.github.DylanCaiCoding.ViewBindingKTX:viewbinding-ktx:2.0.5'
 
 
 }
